@@ -8,6 +8,5 @@ public class Runner {
 		String file = ("4grams.txt");
 		System.out.println(s);
 		CypherBreaker breaker = new CypherBreaker(s, file);
-		breaker.init();
 	}
 }

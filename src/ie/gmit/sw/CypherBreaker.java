@@ -15,6 +15,7 @@ public class CypherBreaker {
 		queue = new ArrayBlockingQueue<Resultable>(MAX_QUEUE_SIZE);
 		quadGramMap = new QuadGramMap(file);
 		this.cypherText = cypherText;
+		init();
 	}
 
 	public void init() {
