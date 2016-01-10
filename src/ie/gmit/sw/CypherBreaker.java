@@ -1,5 +1,6 @@
 package ie.gmit.sw;
 
+import java.io.InputStream;
 import java.util.concurrent.*;
 
 
@@ -17,7 +18,13 @@ public class CypherBreaker {
 		this.cypherText = cypherText;
 		init();
 	}
-
+	public CypherBreaker(String cypherText) { 
+		queue = new ArrayBlockingQueue<Resultable>(MAX_QUEUE_SIZE);
+		quadGramMap = new QuadGramMap();
+		this.cypherText = cypherText;
+		init();
+	}
+	
 	public void init() {
 		for(int i = 2; i < cypherText.length()/2; i++)
 		{

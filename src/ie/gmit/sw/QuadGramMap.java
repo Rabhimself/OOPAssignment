@@ -9,6 +9,10 @@ public class QuadGramMap{
 	public QuadGramMap(String file) {
 		map = (ConcurrentHashMap<String, Double>) new FileParser().parse(file);
 	}
+	public QuadGramMap()
+	{
+		map = (ConcurrentHashMap<String, Double>) new FileParser().parseFromJar();
+	}
 	
 	public double get(String quadgram)
 	{
